@@ -13,7 +13,7 @@
 		</div>
 	{{ end }}
 
-	{{/*Archive section button*/}}
+	{{/*Archive section button
 	{{ if ne .contentType .context.Section }}
 		<div class="item">
 			<a href="/{{ .contentType }}">
@@ -21,7 +21,7 @@
 			</a>
 		</div>
 	{{ end }}
-
+    */}}
 	{{/*Tags section button*/}}
 	{{ if and (ne .context.Data.Plural "tags") .context.Site.Params.tags.enabled }}
 		<div class="item">
