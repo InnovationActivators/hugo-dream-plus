@@ -82,18 +82,14 @@
 		</div>
 	{{ end }}
 	*/}}
-	
-
-
-
-	
+		
 	{{/*Sidebar button*/}}
 	{{ if .context.IsPage }}
-		<div class="ui container tablet computer only grid">
+	{{/*	<div class="ui container tablet computer only grid"> */}}
 			<div class="item right" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
 				<i class="inverted big link sidebar icon" title="{{ i18n `showSidebar` }}"></i>
 			</div>
-		</div>
+	{{/*	</div> */}}
 	{{ end }}
 
 </nav>
