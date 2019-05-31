@@ -12,6 +12,14 @@
 			</a> 
 	</div>
 
+	{{/*Home button*/}}
+	{{/* {{ if not .context.IsHome }} */}}
+	<div class="item left">
+			<a href="/">
+				<i class="inverted big link home icon" title="{{ i18n `home` }}"></i>
+			</a>
+		</div>
+	{{/* {{ end }} */}}
 
 
 	{{/*Archive section button
@@ -64,14 +72,6 @@
 		</div>
 	{{ end }}
 
-	{{/*Sidebar button*/}}
-	{{ if .context.IsPage }}
-		<div class="ui container tablet computer only grid">
-			<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
-				<i class="inverted big link sidebar icon" title="{{ i18n `showSidebar` }}"></i>
-			</div>
-		</div>
-	{{ end }}
 
 	{{/*RSS button
 	{{ if and (eq .contentType "posts") .rssButton }}
@@ -83,14 +83,17 @@
 	{{ end }}
 	*/}}
 	
-	{{/*Home button*/}}
-	{{/* {{ if not .context.IsHome }} */}}
-	<div class="item right">
-			<a href="/">
-				<i class="inverted big link home icon" title="{{ i18n `home` }}"></i>
-			</a>
-		</div>
-	{{/* {{ end }} */}}
 
+
+
+	
+	{{/*Sidebar button*/}}
+	{{ if .context.IsPage }}
+		<div class="ui container tablet computer only grid">
+			<div class="item right" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+				<i class="inverted big link sidebar icon" title="{{ i18n `showSidebar` }}"></i>
+			</div>
+		</div>
+	{{ end }}
 
 </nav>
