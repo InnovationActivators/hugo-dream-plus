@@ -5,15 +5,14 @@
 	</div>
     */}}
 
+	{{/*Email Icon*/}}
+	<div class="item"> 
+			<a href="mailto:info@activators.tech" target="	_blank">
+					<i id="ico" class="inverted big link mail icon" title="Email"></i>
+			</a> 
+	</div>
 
-	{{/*Home button*/}}
-	{{ if not .context.IsHome }}
-		<div class="item">
-			<a href="/">
-				<i class="inverted big link home icon" title="{{ i18n `home` }}"></i>
-			</a>
-		</div>
-	{{ end }}
+
 
 	{{/*Archive section button
 	{{ if ne .contentType .context.Section }}
@@ -84,11 +83,14 @@
 	{{ end }}
 	*/}}
 	
-	{{/*Email Icon*/}}
-	<div class="item"> 
-			<a href="mailto:info@activators.tech" target="	_blank">
-					<i id="ico" class="inverted big link mail icon" title="Email"></i>
-			</a> 
-	</div>
+	{{/*Home button*/}}
+	{{/* {{ if not .context.IsHome }} */}}
+	<div class="item right">
+			<a href="/">
+				<i class="inverted big link home icon" title="{{ i18n `home` }}"></i>
+			</a>
+		</div>
+	{{/* {{ end }} */}}
+
 
 </nav>
